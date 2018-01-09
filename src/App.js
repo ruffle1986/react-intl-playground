@@ -44,7 +44,6 @@ class App extends Component {
             values={ {
               price: (
                 <FormattedNumber
-                  style="currency"
                   currency="HUF"
                   currencyDisplay="name"
                   minimumFractionDigits={ 0 }
