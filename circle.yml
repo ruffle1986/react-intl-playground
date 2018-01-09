@@ -1,0 +1,6 @@
+machine:
+  node:
+    version: 9.3.0
+dependencies:
+  post:
+    - NODE_ENV=production npm run build

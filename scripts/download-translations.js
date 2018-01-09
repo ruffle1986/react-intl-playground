@@ -36,7 +36,7 @@ async function run() {
   const translations = await getTranslations();
   console.log('Saving to file');
   fs.writeFileSync(
-    './build/transifex/translations.json',
+    './build/i18n/translations.json',
     JSON.stringify(translations)
   );
   console.log('Done!');

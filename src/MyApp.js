@@ -20,6 +20,10 @@ export default class extends React.Component {
             )
           } }
         />
+        <FormattedMessage
+          id="dummy"
+          defaultMessage="just yet another formatted message"
+        />
       </div>
     );
   }
