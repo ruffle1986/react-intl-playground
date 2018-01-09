@@ -1,0 +1,14 @@
+[
+  {
+    "id": "greeting",
+    "defaultMessage": "Hello {name}! You have {count, number} {count, plural, one {message} other {messages}}"
+  },
+  {
+    "id": "product",
+    "defaultMessage": "This product costs {price}"
+  },
+  {
+    "id": "date",
+    "defaultMessage": "Today is {date}"
+  }
+]

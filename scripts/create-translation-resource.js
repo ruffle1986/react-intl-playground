@@ -2,7 +2,7 @@ const glob = require('glob');
 const fs = require('fs');
 const mkdir = require('mkdirp');
 
-const messages = glob.sync('./build/messages/src/**/*.json')
+const messages = glob.sync('./i18n/messages/src/**/*.json')
   .reduce((acc, path) => {
     let content = fs.readFileSync(path).toString();
     content = JSON.parse(content);
@@ -12,8 +12,8 @@ const messages = glob.sync('./build/messages/src/**/*.json')
     return acc;
   }, {});
 
-mkdir.sync('./build/transifex/');
+mkdir.sync('./i18n/transifex/');
 
-fs.writeFileSync('./build/transifex/resource.json', JSON.stringify(messages));
+fs.writeFileSync('./i18n/transifex/resource.json', JSON.stringify(messages));
 
 console.log('Done!');

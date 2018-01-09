@@ -1,0 +1,10 @@
+[
+  {
+    "id": "relative",
+    "defaultMessage": "opened {time} by {user}"
+  },
+  {
+    "id": "dummy",
+    "defaultMessage": "just yet another formatted message"
+  }
+]

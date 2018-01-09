@@ -47,8 +47,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "translation:create": "node ./scripts/create-translation-resource.js",
-    "translation:create-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X POST -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./build/transifex/resource.json https://www.transifex.com/api/2/project/the-ruffle-website/resources/",
-    "translation:update-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X PUT -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./build/transifex/resource.json https://www.transifex.com/api/2/project/the-ruffle-website/resource/transifex-resourcejson/content",
+    "translation:create-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X POST -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./i18n/transifex/resource.json https://www.transifex.com/api/2/project/the-ruffle-website/resources/",
+    "translation:update-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X PUT -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./i18n/transifex/resource.json https://www.transifex.com/api/2/project/the-ruffle-website/resource/transifex-resourcejson/content",
     "translation:download": "",
     "translation:get-languages": "curl -i -L --user api:$TRANSIFEX_TOKEN -X GET https://www.transifex.com/api/2/project/the-ruffle-website/languages/",
     "translation:get-translations": "node ./scripts/download-translations.js"
@@ -95,7 +95,7 @@
       [
         "react-intl",
         {
-          "messagesDir": "./build/messages/"
+          "messagesDir": "./i18n/messages/"
         }
       ]
     ]
