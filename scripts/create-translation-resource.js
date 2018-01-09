@@ -14,6 +14,6 @@ const messages = glob.sync('./build/messages/src/**/*.json')
 
 mkdir.sync('./build/transifex/');
 
-fs.writeFileSync('./build/transifex/locales.json', JSON.stringify(messages));
+fs.writeFileSync('./build/transifex/resource.json', JSON.stringify(messages));
 
 console.log('Done!');

@@ -10,7 +10,7 @@ export default class extends React.Component {
       <div>
         <FormattedMessage
           id="relative"
-          defaultMessage="opened { time } ago by { user }"
+          defaultMessage="opened {time} by {user}"
           values={ {
             user: 'Ruff',
             time: (

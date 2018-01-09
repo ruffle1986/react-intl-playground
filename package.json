@@ -47,9 +47,11 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "translation:create": "node ./scripts/create-translation-resource.js",
-    "translation:upload-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X POST -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./build/transifex/locales.json https://www.transifex.com/api/2/project/the-ruffle-website/resources/",
+    "translation:create-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X POST -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./build/transifex/resource.json https://www.transifex.com/api/2/project/the-ruffle-website/resources/",
+    "translation:update-resource": "curl -i -L --user api:$TRANSIFEX_TOKEN -X PUT -H \"Content-type: multipart/form-data\" -F slug=transifex-resourcejson -F name=transifex-resource.json -F i18n_type=KEYVALUEJSON -F content=@./build/transifex/resource.json https://www.transifex.com/api/2/project/the-ruffle-website/resource/transifex-resourcejson/content",
     "translation:download": "",
-    "translation:get-languages": "curl -i -L --user api:$TRANSIFEX_TOKEN -X GET https://www.transifex.com/api/2/project/the-ruffle-website/languages/"
+    "translation:get-languages": "curl -i -L --user api:$TRANSIFEX_TOKEN -X GET https://www.transifex.com/api/2/project/the-ruffle-website/languages/",
+    "translation:get-translations": "node ./scripts/download-translations.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -105,6 +107,8 @@
     "babel-plugin-react-intl": "^2.3.1",
     "glob": "^7.1.2",
     "mkdirp": "^0.5.1",
-    "react-intl": "^2.4.0"
+    "react-intl": "^2.4.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
   }
 }
