@@ -9,9 +9,9 @@ In order to enable i18n in your application, first you have to wrap your entire 
 
 ```javascript
 import React from 'react';
-import { 
+import {
   IntlProvider, // this is the provider component
-  
+
   // following items are the receiver components
   FormattedDate,
   FormattedTime,
@@ -59,7 +59,7 @@ Transifex is a translation management system and seemed quite a good fit to get 
 
 After getting the Transifex token, we can start communicating with the API which is very helpful to make the appropriate steps part of our CI process.
 
-`react-intl` has a Babel plugin which collects all the messages set in the <Formatted* /> components from the source code. It generates json files in the same folder structure they come from. These files must be the part of the version control so that we'll be able to generate the appropriate resource to Transifex.
+`react-intl` has a Babel plugin which collects all the messages set in the <Formatted* /> components from the source code. It generates json files in the same folder structure they come from.
 
 In order to enable the plugin you must run one of the following commands:
 
@@ -110,7 +110,7 @@ https://docs.transifex.com/projects/updating-content#what-happens-when-you-updat
 
 **Download translations from Transifex**
 
-We can download translations from Transifex based on the languages we want to translate to for a given resource. 
+We can download translations from Transifex based on the languages we want to translate to for a given resource.
 
 There are two important things to see:
 
@@ -124,3 +124,4 @@ You can download the translations by the following command:
 $ TRANSIFEX_TOKEN=<token> npm run i18n:download-translations
 ```
 
+It seems to be a good practice to run the i18n commands when you're making a new release of your application but if you need the translations b/c of some debugging purposes, you can run the commands individually in your development environment.
