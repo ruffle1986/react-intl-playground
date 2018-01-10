@@ -1,4 +1,4 @@
-Internationalization your product
+Internationalize your product
 =================================
 
 In this repo, I put together a basic workflow to deal with internationalization and lokalization in your real life, react application. To manage copies in the UI elements based on the user's detected locale code, I'm using the `react-intl` module. It's a set of react elements which helps you to display text on the UI in a declarative way based on the selected locale's language requirements. Under the hood, `react-intl` uses Javascript's built-in `Intl` api which is the part of the Ecmascript standard.
